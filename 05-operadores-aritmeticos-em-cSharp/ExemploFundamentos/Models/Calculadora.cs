@@ -19,5 +19,8 @@ namespace ExemploFundamentos.Models {
         public void Dividir(int x, int y) {
             Console.WriteLine($"{x} / {y} = {x / y}");
         }
+        public void Potencia(int x, int y) {
+            Console.WriteLine($"{x}^{y} = {Math.Pow(x, y)}");
+        }
     }
 }

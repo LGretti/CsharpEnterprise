@@ -2,4 +2,4 @@
 
 Calculadora calc = new Calculadora();
 
-calc.Dividir(1,2);
+calc.Potencia(3,2);
