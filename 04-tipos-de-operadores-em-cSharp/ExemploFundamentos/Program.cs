@@ -3,7 +3,14 @@
 bool maiorDeIdade = false;
 bool possuiAutorizacao = false;
 
-if (maiorDeIdade || possuiAutorizacao) {
+/*if (maiorDeIdade || possuiAutorizacao) {
+    Console.WriteLine("Entrada liberada");
+} else {
+    Console.WriteLine("Entrada negada");
+}*/
+
+
+if (!maiorDeIdade && possuiAutorizacao) {
     Console.WriteLine("Entrada liberada");
 } else {
     Console.WriteLine("Entrada negada");
