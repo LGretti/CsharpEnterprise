@@ -1,6 +1,57 @@
 ﻿using ExemploFundamentos.Models;
 
-int numero = 0;
+while (true) {
+    Console.Clear();
+
+    Console.WriteLine("Digite a opção");
+    Console.WriteLine("1 - cadastrar cliente");
+    Console.WriteLine("2 - buscar cliente");
+    Console.WriteLine("3 - apagar cliente");
+    Console.WriteLine("4 - encerrar sessão");
+    int opcao = Convert.ToInt32(Console.ReadLine());
+
+    switch (opcao) {
+        case 1:
+            Console.WriteLine("cadastrar cliente");
+            break;
+        case 2:
+            Console.WriteLine("buscar cliente");
+            break;
+        case 3:
+            Console.WriteLine("apagar cliente");
+            break;
+        case 4:
+            Console.WriteLine("encerrar");
+            Environment.Exit(0);//Sair do programa
+            break;
+
+        default:
+            Console.WriteLine("Opçao inválida");
+            break;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*int numero = 0;
 int contador = 0;
 
 do {
@@ -10,7 +61,7 @@ do {
     contador += numero;
 } while (numero != 0);
 
-Console.WriteLine($"soma = {contador}");
+Console.WriteLine($"soma = {contador}");*/
 
 
 
