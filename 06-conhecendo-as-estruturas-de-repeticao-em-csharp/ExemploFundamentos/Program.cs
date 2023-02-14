@@ -1,6 +1,8 @@
 ﻿using ExemploFundamentos.Models;
 
-while (true) {
+bool exibirMenu = true;
+
+while (exibirMenu) {
     Console.Clear();
 
     Console.WriteLine("Digite a opção");
@@ -22,7 +24,8 @@ while (true) {
             break;
         case 4:
             Console.WriteLine("encerrar");
-            Environment.Exit(0);//Sair do programa
+            //Environment.Exit(0);//Sair do programa
+            exibirMenu = false;
             break;
 
         default:
