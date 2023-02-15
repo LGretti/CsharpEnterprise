@@ -7,6 +7,7 @@ listaString.Add("SP");
 listaString.Add("BA");
 listaString.Add("MG");
 
+
 foreach (string str in listaString) {
     Console.WriteLine(str);
 }
