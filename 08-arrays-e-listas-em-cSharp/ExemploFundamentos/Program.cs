@@ -7,8 +7,16 @@ arrayInteiros[1] = 64;
 arrayInteiros[2] = 50;
 //arrayInteiros[3] = 1;
 
-//qual array, qual tamanho
-Array.Resize(ref arrayInteiros, arrayInteiros.Length * 2);
+int[] arrayDobro = new int[arrayInteiros.Length * 2];
+
+//origem dos dados, destino, tamanho
+Array.Copy(arrayInteiros, arrayDobro, arrayInteiros.Length);
+
+
+
+
+
+
 
 Console.WriteLine("Array com For");
 for (int i = 0; i < arrayInteiros.Length; i++) {
