@@ -13,5 +13,12 @@ namespace ExemploFundamentos.Common.Models {
         public void Apresentar() {
             Console.WriteLine($"Olá, meu nome é {Nome}, e tenho {Idade} anos.");
         }
+
+        public Boolean PermitidaEntrada() {
+            if (Idade < 18 && NomeRepresentanteLegalDaPessoaFisica == "") {
+                return false;
+            }
+            return true;
+        }
     }
 }
