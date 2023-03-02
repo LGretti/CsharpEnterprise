@@ -49,5 +49,11 @@ void exercicio2() {
 }
 
 void exercicio3() {
+    double pi, raio, volume;
+    pi = 3.14159;
+ 
+    raio = double.Parse(Console.ReadLine());
+    volume = 4.0 * pi * Math.Pow(raio, 3) / 3;
 
+    Console.WriteLine($"VOLUME = {volume.ToString("F3")}");
 }
