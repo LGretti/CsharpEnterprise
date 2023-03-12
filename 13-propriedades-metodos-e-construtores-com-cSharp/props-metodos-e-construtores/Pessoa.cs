@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace props_metodos_e_construtores {
     public class Pessoa {
         private string _nome;
+        private int _idade;
 
         public string Nome {
             get => _nome.ToUpper();
@@ -20,7 +21,17 @@ namespace props_metodos_e_construtores {
             }
         }
 
-        public int Idade { get; set; }
+        public int Idade {
+            get => _idade;
+
+            set {
+                if (value < 0) {
+                    throw new ArgumentException("Idade não pode ser menor que 0.");
+                }
+
+                _idade = value;
+            }
+        }
 
         public void Apresentar() {
             Console.WriteLine($"Olá, me chamo {Nome}.");
