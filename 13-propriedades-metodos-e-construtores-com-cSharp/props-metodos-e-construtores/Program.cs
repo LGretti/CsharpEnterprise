@@ -1,2 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using props_metodos_e_construtores;
+
+Pessoa p = new Pessoa();
+
+p.Nome = "Lucas";
