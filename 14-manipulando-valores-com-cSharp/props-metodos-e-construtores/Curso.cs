@@ -24,7 +24,8 @@ namespace props_metodos_e_construtores {
 
         public void ListarAlunos() {
             for (int count = 0; count < Alunos.Count; count++) {
-                string texto = "No. " + count + " " + Alunos[count].NomeCompleto;
+                //string texto = "No. " + count + " " + Alunos[count].NomeCompleto;
+                string texto = $"No. {count} - {Alunos[count].NomeCompleto}"
                 Console.WriteLine(texto);
             }
         }
