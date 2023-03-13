@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace props_metodos_e_construtores {
     public class Pessoa {
         private string _nome;
+        private string _sobrenome;
         private int _idade;
 
         public string Nome {
@@ -21,6 +22,20 @@ namespace props_metodos_e_construtores {
             }
         }
 
+        public string Sobrenome {
+            get => _sobrenome.ToUpper();
+
+            set {
+                if ((value == "") || (value == null)) {
+                    throw new ArgumentException("Nome não pode ser vazio");
+                }
+
+                _sobrenome = value;
+            }
+        }
+
+        public string NomeCompleto => $"{Nome} {Sobrenome}";
+
         public int Idade {
             get => _idade;
 
@@ -34,7 +49,7 @@ namespace props_metodos_e_construtores {
         }
 
         public void Apresentar() {
-            Console.WriteLine($"Olá, me chamo {Nome}.");
+            Console.WriteLine($"Olá, me chamo {NomeCompleto}.");
         }
     }
 }
