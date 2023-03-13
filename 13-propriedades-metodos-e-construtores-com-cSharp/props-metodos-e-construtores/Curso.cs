@@ -17,5 +17,9 @@ namespace props_metodos_e_construtores {
             int quantidade = Alunos.Count;
             return quantidade;
         }
+
+        public void RemoverAluno(Pessoa aluno) {
+            Alunos.Remove(aluno);
+        }
     }
 }
