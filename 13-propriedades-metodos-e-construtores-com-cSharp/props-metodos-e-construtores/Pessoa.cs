@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace props_metodos_e_construtores {
     public class Pessoa {
+
+        public Pessoa() { }
+
+        public Pessoa(string nome, string sobrenome) {
+            Nome = nome;
+            Sobrenome = sobrenome;
+        }
+
+
         private string _nome;
         private string _sobrenome;
         private int _idade;
