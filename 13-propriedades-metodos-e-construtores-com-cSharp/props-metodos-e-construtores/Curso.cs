@@ -12,5 +12,10 @@ namespace props_metodos_e_construtores {
         public void AdicionarAluno(Pessoa aluno) {
             Alunos.Add(aluno);
         }
+
+        public int ObterQuantidadeDeAlunosMatriculados() {
+            int quantidade = Alunos.Count;
+            return quantidade;
+        }
     }
 }
