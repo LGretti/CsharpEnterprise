@@ -1,12 +1,12 @@
 ﻿using props_metodos_e_construtores;
 
-Pessoa p1 = new Pessoa();
-p1.Nome = "Lucas";
-p1.Sobrenome = "Gretti";
+Pessoa p1 = new Pessoa(nome: "Lucas", sobrenome: "Gretti");
+//p1.Nome = "Lucas";
+//p1.Sobrenome = "Gretti";
 
-Pessoa p2 = new Pessoa();
-p1.Nome = "Joao";
-p1.Sobrenome = "Silva";
+Pessoa p2 = new Pessoa("João", "Silva");
+//p1.Nome = "Joao";
+//p1.Sobrenome = "Silva";
 
 Curso cursoDeIngles = new Curso();
 cursoDeIngles.Nome = "Inglês";
