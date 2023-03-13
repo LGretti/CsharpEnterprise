@@ -18,8 +18,14 @@ namespace props_metodos_e_construtores {
             return quantidade;
         }
 
-        public void RemoverAluno(Pessoa aluno) {
-            Alunos.Remove(aluno);
+        public bool RemoverAluno(Pessoa aluno) {
+            return Alunos.Remove(aluno);
+        }
+
+        public void ListarAlunos() {
+            foreach (Pessoa aluno in Alunos) {
+                Console.WriteLine(aluno.NomeCompleto);
+            }
         }
     }
 }
