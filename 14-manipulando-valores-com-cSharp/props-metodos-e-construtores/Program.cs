@@ -5,13 +5,19 @@ using System.Globalization;
 string dataString = "2023-05-19 18:00";
 
 
-DateTime.TryParseExact(dataString
-                      ,"yyyy-MM-dd HH:mm"
-                      ,CultureInfo.InvariantCulture
-                      ,DateTimeStyles.None
-                      ,out DateTime data);
+bool sucesso = DateTime.TryParseExact(dataString
+                                     ,"yyyy-MM-dd HH:mm"
+                                     ,CultureInfo.InvariantCulture
+                                     ,DateTimeStyles.None
+                                     ,out DateTime data);
 
-Console.WriteLine(data);
+if (sucesso) {
+    Console.WriteLine("Sucesso! " + data);
+} else {
+    Console.WriteLine("Erro de conversão para " + dataString    );
+}
+
+
 
 
 
