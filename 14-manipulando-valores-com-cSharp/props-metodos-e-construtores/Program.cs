@@ -1,12 +1,12 @@
 ﻿using props_metodos_e_construtores;
 using System.Globalization;
 
-CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
 
 
 decimal valorMonetario = 82.40M;
 
-Console.WriteLine($"{valorMonetario:C}");
+Console.WriteLine($"{valorMonetario.ToString("C", CultureInfo.CreateSpecificCulture("en-US"))}");
 
 
 
