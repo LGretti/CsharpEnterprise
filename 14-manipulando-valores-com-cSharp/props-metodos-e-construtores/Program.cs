@@ -2,11 +2,26 @@
 using System.Globalization;
 
 
+string dataString = "2023-05-19 18:00";
 
-DateTime data = DateTime.Parse("19/05/2020 15:00");
+
+DateTime.TryParseExact(dataString
+                      ,"yyyy-MM-dd HH:mm"
+                      ,CultureInfo.InvariantCulture
+                      ,DateTimeStyles.None
+                      ,out DateTime data);
+
+Console.WriteLine(data);
+
+
+
+
+
+
+/*DateTime data = DateTime.Parse("19/05/2020 15:00");
 
 Console.WriteLine(data.ToShortDateString);
-Console.WriteLine(data.ToShortTimeString);
+Console.WriteLine(data.ToShortTimeString);*/
 
 
 
