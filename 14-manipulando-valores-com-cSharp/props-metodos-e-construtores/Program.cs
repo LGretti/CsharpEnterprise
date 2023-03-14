@@ -1,7 +1,47 @@
 ﻿using props_metodos_e_construtores;
 using System.Globalization;
 
-CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
+
+
+DateTime data = DateTime.Now;
+
+Console.WriteLine(data.ToString("dd/MM/yyyy HH:mm"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
 
 
 decimal valorMonetario = 82.40M;
@@ -12,9 +52,13 @@ Console.WriteLine($"{valorMonetario.ToString("C2")}"); //pra cada numero 1 casa 
 
 
 
+double porcentagem = .3421;
+
+Console.WriteLine(porcentagem.ToString("P"));
 
 
-
+int numero = 123456;
+Console.WriteLine(numero.ToString("##-##-##"));*/
 
 
 
