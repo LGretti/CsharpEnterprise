@@ -1,4 +1,8 @@
 ﻿using props_metodos_e_construtores;
+using System.Globalization;
+
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+
 
 decimal valorMonetario = 82.40M;
 
