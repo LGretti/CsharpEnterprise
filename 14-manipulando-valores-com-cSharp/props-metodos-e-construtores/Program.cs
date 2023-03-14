@@ -1,11 +1,41 @@
 ﻿using props_metodos_e_construtores;
 
+decimal valorMonetario = 82.40M;
 
-string numero1 = "10";
+Console.WriteLine($"{valorMonetario:C}");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*string numero1 = "10";
 int numero2 = 20;
 string resultado = numero1 + numero2;
 
-Console.WriteLine(resultado); //vai retornar 1020
+Console.WriteLine(resultado); //vai retornar 1020*/
 
 
 
