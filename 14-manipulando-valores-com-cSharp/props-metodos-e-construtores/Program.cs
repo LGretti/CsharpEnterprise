@@ -3,9 +3,10 @@ using System.Globalization;
 
 
 
-DateTime data = DateTime.Now;
+DateTime data = DateTime.Parse("19/05/2020 15:00");
 
-Console.WriteLine(data.ToString("dd/MM/yyyy HH:mm"));
+Console.WriteLine(data.ToShortDateString);
+Console.WriteLine(data.ToShortTimeString);
 
 
 
