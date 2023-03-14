@@ -1,6 +1,16 @@
 ﻿using props_metodos_e_construtores;
 
-Pessoa p1 = new Pessoa(nome: "Lucas", sobrenome: "Gretti");
+
+string numero1 = "10";
+int numero2 = 20;
+string resultado = numero1 + numero2;
+
+Console.WriteLine(resultado); //vai retornar 1020
+
+
+
+
+/*Pessoa p1 = new Pessoa(nome: "Lucas", sobrenome: "Gretti");
 //p1.Nome = "Lucas";
 //p1.Sobrenome = "Gretti";
 
@@ -14,4 +24,4 @@ cursoDeIngles.Alunos = new List<Pessoa>();
 
 cursoDeIngles.AdicionarAluno(p1);
 cursoDeIngles.AdicionarAluno(p2);
-cursoDeIngles.ListarAlunos();
+cursoDeIngles.ListarAlunos();*/
