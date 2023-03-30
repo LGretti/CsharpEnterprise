@@ -14,7 +14,6 @@ namespace props_metodos_e_construtores {
             Sobrenome = sobrenome;
         }
 
-
         private string _nome;
         private string _sobrenome;
         private int _idade;
