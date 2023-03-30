@@ -16,5 +16,7 @@ try {
 
 } catch(Exception errMsg) { //Mais geral, todas vêm daqui
     Console.WriteLine($"Ocorreu um erro: {errMsg}");
+} finally { //Finalmente (executa dando erro ou não)
+    Console.WriteLine("Chegou até aqui");
 }
 
