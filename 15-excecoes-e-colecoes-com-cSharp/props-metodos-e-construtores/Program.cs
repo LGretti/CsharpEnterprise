@@ -8,7 +8,13 @@ try {
     foreach (string line in linhas) {
         Console.WriteLine(line);
     }
-} catch(Exception errMsg) {
+} catch(FileNotFoundException errMsg) { //Começa pelas tratativas específicas e termina na generalista
+    Console.WriteLine($"Arquivo não encontrado: {errMsg}");
+
+} catch (DirectoryNotFoundException errMsg) {
+    Console.WriteLine($"Diretório não encontrado: {errMsg}");
+
+} catch(Exception errMsg) { //Mais geral, todas vêm daqui
     Console.WriteLine($"Ocorreu um erro: {errMsg}");
 }
 
