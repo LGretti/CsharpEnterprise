@@ -2,7 +2,7 @@
 using System.Globalization;
 
 
-string[] linhas = File.ReadAllLines("files/teste.txt");
+string[] linhas = File.ReadAllLines("files/testaae.txt");
 
 foreach (string line in linhas) {
     Console.WriteLine(line);
