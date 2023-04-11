@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +13,11 @@ namespace props_metodos_e_construtores {
         public Pessoa(string nome, string sobrenome) {
             Nome = nome;
             Sobrenome = sobrenome;
+        }
+
+        public void Deconstruct (out string nome, out string sobrenome) {
+            nome = Nome;
+            sobrenome = Sobrenome;
         }
 
 

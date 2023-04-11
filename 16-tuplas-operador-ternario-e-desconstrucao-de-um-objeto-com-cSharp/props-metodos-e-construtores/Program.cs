@@ -1,6 +1,44 @@
 ﻿using props_metodos_e_construtores;
 using System.Globalization;
 
+
+Pessoa p1 = new Pessoa("Lucas", "Gretti");
+
+//desmembrando em campos independentes
+(string nome, string sobrenome) = p1;
+
+Console.WriteLine($"{nome} {sobrenome}");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 LeituraArquivo arquivo = new LeituraArquivo();
 
 var (sucesso, linhasArquivo, _) = arquivo.LerArquivo("files/teste.txt");
@@ -14,7 +52,7 @@ if (sucesso) {
     Console.WriteLine($"Não foi possível ler o arquivo!");
 }
 
-
+*/
 
 
 
