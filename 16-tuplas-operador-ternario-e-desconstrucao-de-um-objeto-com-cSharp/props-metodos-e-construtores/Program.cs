@@ -1,14 +1,38 @@
 ﻿using props_metodos_e_construtores;
 using System.Globalization;
 
+int numero = 5;
+bool par = false;
 
+par = numero % 2 == 0;
+                                            //se    entao   senao
+Console.WriteLine($"O número {numero} é " + (par ? "par" : "impar"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 Pessoa p1 = new Pessoa("Lucas", "Gretti");
 
 //desmembrando em campos independentes
 (string nome, string sobrenome) = p1;
 
 Console.WriteLine($"{nome} {sobrenome}");
-
+*/
 
 
 
