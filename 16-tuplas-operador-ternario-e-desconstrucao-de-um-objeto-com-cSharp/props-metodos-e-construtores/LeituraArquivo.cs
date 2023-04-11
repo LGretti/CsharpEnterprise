@@ -16,6 +16,7 @@ namespace props_metodos_e_construtores {
                 return(true, linhas, linhas.Count());
 
             } catch (Exception e) {
+
                 return(false, new string[0], 0);
             }
 
