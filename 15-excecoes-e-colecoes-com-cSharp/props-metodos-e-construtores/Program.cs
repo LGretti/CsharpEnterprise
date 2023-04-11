@@ -1,8 +1,37 @@
 ﻿using props_metodos_e_construtores;
 using System.Globalization;
 
+         //chave, valor
+Dictionary<string, string> estados = new Dictionary<string, string>();
+
+//Estados do brasil
+estados.Add("SP", "São Paulo");
+estados.Add("BA", "Bahia");
+estados.Add("MG", "Minas Gerais");
 
 
+foreach (KeyValuePair<string, string> item in estados) {
+    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 Stack<int> pilha = new Stack<int>();
 
@@ -32,7 +61,7 @@ foreach (int i in pilha) {
 }
 
 
-
+*/
 
 
 
