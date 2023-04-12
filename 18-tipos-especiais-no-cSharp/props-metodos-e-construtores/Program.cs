@@ -4,27 +4,30 @@ using Newtonsoft.Json;
 using Microsoft.VisualBasic;
 using System.ComponentModel.Design;
 
+string conteudoArquivo = File.ReadAllText("files/vendas.json");
 
-var tipoAnonimo = new { Nome = "Lucas", Sobrenome = "Gretti", Altura = 1.78 };
+List<Venda>? listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
 
-Console.WriteLine(tipoAnonimo.Nome);
+//minha var listaAnonima pega a listavenda e da um select no x (sendo o x o listaVenda)
+//e ele da um new na lista anonima com prod e preco
+var listaAnonima = listaVenda.Select(x => new{x.Produto, x.Preco});
 
-
-
-
-
-
-
-
-
+foreach (var item in listaAnonima) {
+    Console.WriteLine($"Produto {item.Produto}, preço: {item.Preco}");
+}
 
 
 
 
 
-//string conteudoArquivo = File.ReadAllText("files/vendas.json");
 
-//List<Venda>? listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+
+
+
+
+
+
 
 //foreach (Venda venda in listaVenda) {
 //    Console.WriteLine($"Venda Id. {venda.Id} - " +
