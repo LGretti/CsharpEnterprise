@@ -5,7 +5,7 @@ using Microsoft.VisualBasic;
 using System.ComponentModel.Design;
 
 
-var tipoAnonimo = { Nome = "Lucas", Sobrenome = "Gretti", Altura = 1.78 };
+var tipoAnonimo = new { Nome = "Lucas", Sobrenome = "Gretti", Altura = 1.78 };
 
 Console.WriteLine(tipoAnonimo.Nome);
 
