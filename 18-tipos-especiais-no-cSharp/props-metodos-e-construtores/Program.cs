@@ -4,6 +4,48 @@ using Newtonsoft.Json;
 using Microsoft.VisualBasic;
 using System.ComponentModel.Design;
 
+
+
+dynamic variavelDinamica = 4;
+
+Console.WriteLine(variavelDinamica.GetType());
+
+variavelDinamica = "Lucas";
+
+Console.WriteLine(variavelDinamica.GetType());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 string conteudoArquivo = File.ReadAllText("files/vendas.json");
 
 List<Venda>? listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
@@ -17,7 +59,7 @@ foreach (var item in listaAnonima) {
 }
 
 
-
+*/
 
 
 
