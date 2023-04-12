@@ -4,10 +4,14 @@ using Newtonsoft.Json;
 using Microsoft.VisualBasic;
 using System.ComponentModel.Design;
 
-bool? desejaReceberEmail = null;
+string conteudoArquivo = File.ReadAllText("files/vendas.json");
 
-if (desejaReceberEmail.HasValue && desejaReceberEmail.Value) {//pra verificar se é null
-    Console.WriteLine("Aceita");
-} else {
-    Console.WriteLine("Não deseja ou não optou");
+List<Venda>? listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
+
+foreach (Venda venda in listaVenda) {
+    Console.WriteLine($"Venda Id. {venda.Id} - " +
+                      $"Produto: {venda.Produto} - " +
+                      $"R${venda.Preco} - " +
+                      $"Data: {venda.DataVenda.ToString("dd/MM/yyyy")} - " +
+                      $"{(venda.Desconto.HasValue ? $"Desconto: {venda.Desconto}" : "")}");
 }
