@@ -9,7 +9,7 @@ namespace props_metodos_e_construtores {
     public class Venda {
         public int Id { get; set; }
 
-        [JsonProperty("Nome_Produto")] //O produto vai ser considerado como Nome_Produto no JSON
+        [JsonProperty("Nome_Produto")]
         public string Produto { get; set; }
 
         public decimal Preco { get; set; }
