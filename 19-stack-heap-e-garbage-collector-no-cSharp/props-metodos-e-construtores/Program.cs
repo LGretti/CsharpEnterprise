@@ -4,7 +4,39 @@ using Newtonsoft.Json;
 using Microsoft.VisualBasic;
 using System.ComponentModel.Design;
 
-MeuArray<int> arrayInteiro = new MeuArray<int>();
+
+int numero = 30;
+bool par = false;
+
+//if ternario
+//variavel int numero recebeu agora esse EhPar();
+par = numero.EhPar();
+
+string mensagem = "O número " + numero + " é " + (par ? "par" : "impar");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MeuArray<int> arrayInteiro = new MeuArray<int>();
 
 arrayInteiro.AdicionarElementoArray(30);
 
@@ -16,4 +48,4 @@ MeuArray<string> arrayString = new MeuArray<string>();
 
 arrayString.AdicionarElementoArray("Teste");
 
-Console.WriteLine(arrayString[0]);
+Console.WriteLine(arrayString[0]);*/
