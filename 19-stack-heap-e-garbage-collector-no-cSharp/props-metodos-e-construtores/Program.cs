@@ -5,16 +5,45 @@ using Microsoft.VisualBasic;
 using System.ComponentModel.Design;
 
 
+int a = 10;
+int b = a;
 
-Pessoa p1 = new Pessoa("Lucas", "gretti");
-Pessoa p2 = p1;
+b = 15;
 
-//o p1 e o p2 estão como Vinicius gretti
-p2.Nome = "Vinicius";
+Console.WriteLine(a);
+Console.WriteLine(b);
+Console.WriteLine();
 
 
-Console.WriteLine(p1.NomeCompleto);
-Console.WriteLine(p2.NomeCompleto);
+a = 5;
+
+Console.WriteLine(a);
+Console.WriteLine(b);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Pessoa p1 = new Pessoa("Lucas", "gretti");
+//Pessoa p2 = p1;
+
+////o p1 e o p2 estão como Vinicius gretti
+//p2.Nome = "Vinicius";
+
+
+//Console.WriteLine(p1.NomeCompleto);
+//Console.WriteLine(p2.NomeCompleto);
 
 
 
