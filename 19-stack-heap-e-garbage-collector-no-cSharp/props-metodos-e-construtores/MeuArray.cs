@@ -10,7 +10,7 @@ namespace props_metodos_e_construtores {
     //Ele pode ser qq outra letra
     public class MeuArray<T> {
         private static int capacidade = 10;
-        private int contador = 0
+        private int contador = 0;
         public T[] array = new T[capacidade];
 
         public void AdicionarElementoArray(T elemento) {

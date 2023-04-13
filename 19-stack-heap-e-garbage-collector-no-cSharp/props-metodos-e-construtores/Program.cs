@@ -4,77 +4,16 @@ using Newtonsoft.Json;
 using Microsoft.VisualBasic;
 using System.ComponentModel.Design;
 
+MeuArray<int> arrayInteiro = new MeuArray<int>();
 
+arrayInteiro.AdicionarElementoArray(30);
 
-dynamic variavelDinamica = 4;
-
-Console.WriteLine(variavelDinamica.GetType());
-
-variavelDinamica = "Lucas";
-
-Console.WriteLine(variavelDinamica.GetType());
+Console.WriteLine(arrayInteiro[0]);
 
 
 
+MeuArray<string> arrayString = new MeuArray<string>();
 
+arrayString.AdicionarElementoArray("Teste");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-string conteudoArquivo = File.ReadAllText("files/vendas.json");
-
-List<Venda>? listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoArquivo);
-
-//minha var listaAnonima pega a listavenda e da um select no x (sendo o x o listaVenda)
-//e ele da um new na lista anonima com prod e preco
-var listaAnonima = listaVenda.Select(x => new{x.Produto, x.Preco});
-
-foreach (var item in listaAnonima) {
-    Console.WriteLine($"Produto {item.Produto}, preço: {item.Preco}");
-}
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-//foreach (Venda venda in listaVenda) {
-//    Console.WriteLine($"Venda Id. {venda.Id} - " +
-//                      $"Produto: {venda.Produto} - " +
-//                      $"R${venda.Preco} - " +
-//                      $"Data: {venda.DataVenda.ToString("dd/MM/yyyy")} - " +
-//                      $"{(venda.Desconto.HasValue ? $"Desconto: {venda.Desconto}" : "")}");
-//}
+Console.WriteLine(arrayString[0]);
