@@ -1,0 +1,1 @@
+INSERT INTO Clientes VALUES ('Lucas', 'Gretti', 'lucassgretti@outlook.com', 1, GETDATE())
