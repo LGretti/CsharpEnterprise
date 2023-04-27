@@ -27,3 +27,14 @@ select avg(preco) from produtos
 
 select Nome + ', Cor: ' + Cor + ' - ' + Genero AS NomeProduto
 FROM Produtos
+
+
+--upper
+
+select upper(nome)
+from produtos
+
+--lower
+
+select lower(nome)
+from produtos
