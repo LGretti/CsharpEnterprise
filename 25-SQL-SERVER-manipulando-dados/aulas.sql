@@ -43,3 +43,4 @@ from produtos
 
 alter table produtos
 add DataCadastro datetime
+update produtos set DataCadastro = getdate()
