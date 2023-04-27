@@ -38,3 +38,8 @@ from produtos
 
 select lower(nome)
 from produtos
+
+--add column
+
+alter table produtos
+add DataCadastro datetime
