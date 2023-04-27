@@ -21,3 +21,9 @@ select max(preco) from produtos
 --avg
 
 select avg(preco) from produtos
+
+
+--concatenacao
+
+select Nome + ', Cor: ' + Cor + ' - ' + Genero AS NomeProduto
+FROM Produtos
