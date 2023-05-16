@@ -71,3 +71,10 @@ REFERENCES clientes(id))
 
 
 select * from clientes
+
+-- select com inner join
+
+select *
+from clientes
+inner join enderecos on clientes.id = enderecos.IdCliente
+where clientes.id = 4
