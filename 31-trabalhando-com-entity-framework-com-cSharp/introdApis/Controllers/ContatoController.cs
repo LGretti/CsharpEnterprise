@@ -31,5 +31,22 @@ namespace introdApis.Controllers {
             return Ok(context);
         }
 
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, Contato contato) {
+            var contatoBD = _context.Contatos.Find(id);
+
+            if (contatoBD == null)
+                return NotFound();
+
+            contatoBD.Nome = contato.Nome;
+            contatoBD.Telefone = contato.Telefone;
+            contatoBD.Ativo = contato.Ativo;
+
+            _context.Contatos.Update(contatoBD);
+            _context.SaveChanges();
+
+            return Ok(contatoBD);
+        }
+
     }
 }
