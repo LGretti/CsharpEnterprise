@@ -48,5 +48,17 @@ namespace introdApis.Controllers {
             return Ok(contatoBD);
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id) {
+            var contatoBD = _context.Contatos.Find(id);
+
+            if (contatoBD == null)
+                return NotFound();
+
+            _context.Contatos.Remove(contatoBD);
+            _context.SaveChanges();
+            return NoContent(); //não há retorno, mas ouve sucesso.
+        }
+
     }
 }
