@@ -31,6 +31,17 @@ namespace introdApis.Controllers {
             return Ok(context);
         }
 
+        [HttpGet("ObterPorNome")]
+        public IActionResult ObterPorNome(string nome) {
+            //esse Contatos é o dbSet, sua propriedade find
+            var context = _context.Contatos.Where(x => x.Nome.Contains(nome));
+
+            if (context == null)
+                return NotFound();
+
+            return Ok(context);
+        }
+
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, Contato contato) {
             var contatoBD = _context.Contatos.Find(id);
