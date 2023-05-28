@@ -17,7 +17,8 @@ namespace introdApis.Controllers {
         public IActionResult Create(Contato contato) {
             _context.Add(contato);
             _context.SaveChanges();
-            return Ok(contato);
+            //aqui ele vai retornar a rota onde pode acessar o dado criado
+            return CreatedAtAction(nameof(ObterPorId), new { id = contato.Id }, contato);
         }
 
         [HttpGet("{id}")]
