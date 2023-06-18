@@ -1,5 +1,6 @@
-using Microsoft.EntityFrameworkCore;
 using ProjetoMVC;
+using ProjetoMVC.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
