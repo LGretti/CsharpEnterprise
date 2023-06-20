@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ProjetoMVC;
+using ProjetoMVC.Models;
 
 namespace ProjetoMVC;
 public class ContatoController : Controller
@@ -16,5 +16,15 @@ public class ContatoController : Controller
 
   public IActionResult Criar() {
     return View();
+  }
+
+  [HttpPost]
+  public IActionResult Criar(Contato contato){
+    if (ModelState.IsValid){
+      _context.Contatos.Add(contato);
+      _context.SaveChanges();
+      return RedirectToAction(nameof(Index));
+    }
+    return View(contato);
   }
 }
