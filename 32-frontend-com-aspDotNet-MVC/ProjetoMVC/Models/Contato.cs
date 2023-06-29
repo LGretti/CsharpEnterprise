@@ -5,6 +5,8 @@ public class Contato {
   public string Telefone { get; set; }
   public bool Ativo { get; set; }
 
+  public Contato(){  }
+
   public Contato(int id, string nome, string telefone, bool ativo) {
     Id = id;
     Nome = nome;
