@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebApiAzureTables.Models;
+using Azure;
+using Azure.Data.Tables;
 
 namespace WebApiAzureTables.Controllers
 {
@@ -14,23 +16,23 @@ namespace WebApiAzureTables.Controllers
     public class ContatoController : ControllerBase
     {
         private readonly string _connectionString;
-        private readonly string _tabelName;
+        private readonly string _tableName;
 
         public ContatoController(IConfiguration configuration) {
             _connectionString = configuration.GetValue<string>("SAConnectionString");
-            _tabelName        = configuration.GetValue<string>("AzureTableName");
+            _tableName        = configuration.GetValue<string>("AzureTableName");
         }
 
         private TableClient GetTableClient(){
             var serviceClient = new TableServiceClient(_connectionString); //iniciando o serviço table storage
-            var tabelClient   = serviceClient.GetTableClient(_tabelName);  //iniciando a tabela
+            var tableClient   = serviceClient.GetTableClient(_tableName);  //iniciando a tabela
 
             tableClient.CreateIfNotExists(); //ele cria ela no azure
             return tableClient;
         }
 
         [HttpPost]
-        public IACtionResult Criar (Contato contato) {
+        public IActionResult Criar (Contato contato) {
             var tableClient = GetTableClient();
 
             contato.RowKey = Guid.NewGuid().ToString(); //identificador global
