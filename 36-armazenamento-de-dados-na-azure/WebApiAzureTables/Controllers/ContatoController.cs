@@ -12,22 +12,14 @@ namespace WebApiAzureTables.Controllers
     [Route("[controller]")]
     public class ContatoController : ControllerBase
     {
-        private readonly ILogger<ContatoController> _logger;
+        private readonly string _connectionString;
+        private readonly string _tabelName;
 
-        public ContatoController(ILogger<ContatoController> logger)
-        {
-            _logger = logger;
+        public ContatoController(IConfiguration configuration) {
+            _connectionString = configuration.GetValue<string>("SAConnectionString");
+            _tabelName        = configuration.GetValue<string>("AzureTableName");
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View("Error!");
-        }
+        
     }
 }
