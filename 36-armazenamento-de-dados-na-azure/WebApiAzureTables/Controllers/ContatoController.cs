@@ -70,5 +70,12 @@ namespace WebApiAzureTables.Controllers
 
             return Ok(contatos);
         }
+
+        [HttpDelete("id")]
+        public IActionResult Deletar(string id) {
+            var tableClient = GetTableClient();
+            tableClient.DeleteEntity(id, id);
+            return NoContent();
+        }
     }
 }
