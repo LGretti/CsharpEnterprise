@@ -60,5 +60,22 @@ namespace app.Controllers
             return Ok();
         }
 
+
+        // GET: /Arquivos/Listar
+        [HttpGet("Listar")]
+        public IActionResult Listar() {
+            List<BlobDto> blobsDto = new List<BlobDto>();
+            BlobContainerClient container = new(_connectionString, _containerName);
+
+            foreach (var blob in container.GetBlobs()) {
+                blobsDto.Add(new BlobDto {
+                    Nome = blob.Name,
+                    Tipo = blob.Properties.ContentType,
+                    Uri  = container.Uri.AbsoluteUri + "/" + blob.Name
+                });
+            }
+
+            return Ok(blobsDto);
+        }
     }
 }
