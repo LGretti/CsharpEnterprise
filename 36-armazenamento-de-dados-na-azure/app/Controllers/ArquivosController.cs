@@ -35,6 +35,30 @@ namespace app.Controllers
             return Ok(blob.Uri.ToString());
         }
 
+        // GET: /Arquivos/Download/{nome}
+        [HttpGet("Download/{nome}")]
+        public IActionResult DownloadArquivo(string nome) {
+            BlobContainerClient containter = new(_connectionString, _containerName);
+            BlobClient blob = containter.GetBlobClient(nome);
+            
+            if (!blob.Exists()) {
+                return NotFound();
+            }
+
+            //baixa a imagem e grava na retorno e retorna em um array
+            var retorno = blob.DownloadContent();
+            return File(retorno.Value.Content.ToArray(), retorno.Value.Details.ContentType, blob.Name);
+        }
+
+        // DELETE: /Arquivos/Deletar/{nome}
+        [HttpDelete("Deletar/{nome}")]
+        public IActionResult DeletarArquivo(string nome) {
+            BlobContainerClient containter = new(_connectionString, _containerName);
+            BlobClient blob = containter.GetBlobClient(nome);
+
+            blob.DeleteIfExists();
+            return Ok();
+        }
 
     }
 }
