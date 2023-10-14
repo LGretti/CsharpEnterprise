@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 using Calculadora.Services;
 
 namespace CalculadoraTestes;
@@ -26,19 +27,6 @@ public class CalculadoraTestes
     }
 
     [Fact]
-    public void DeveVerificarSe5EhParERetornarFalse()
-    {
-        //Arrange
-        int n = 5;
-
-        //Act
-        bool r = _calc.EhPar(n);
-
-        //Assert
-        Assert.False(r);
-    }
-
-    [Fact]
     public void DeveVerificarSe4EhParERetornarTrue()
     {
         //Arrange
@@ -48,6 +36,21 @@ public class CalculadoraTestes
         bool r = _calc.EhPar(n);
 
         //Assert
+        Assert.True(r);
+    }
+
+    [Theory]
+    [InlineData(2)]
+    [InlineData(4)]
+    [InlineData(6)]
+    [InlineData(8)]
+    [InlineData(10)]
+    public void DeveVerificarSeOsNumerosSaoVerdadeirosERetornarTrue(int numero){
+        //arrange
+        //act
+        bool r = _calc.EhPar(numero);
+
+        //assert
         Assert.True(r);
     }
 }
