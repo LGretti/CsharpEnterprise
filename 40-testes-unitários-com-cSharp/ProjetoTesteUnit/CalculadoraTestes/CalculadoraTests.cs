@@ -40,17 +40,11 @@ public class CalculadoraTestes
     }
 
     [Theory]
-    [InlineData(2)]
-    [InlineData(4)]
-    [InlineData(6)]
-    [InlineData(8)]
-    [InlineData(10)]
-    public void DeveVerificarSeOsNumerosSaoVerdadeirosERetornarTrue(int numero){
+    [InlineData(new int[] { 2, 4, 6, 8, 10 })]
+    public void DeveVerificarSeOsNumerosSaoVerdadeirosERetornarTrue(int[] numeros){
         //arrange
         //act
-        bool r = _calc.EhPar(numero);
-
         //assert
-        Assert.True(r);
+        Assert.All(numeros, n => Assert.True(_calc.EhPar(n)));
     }
 }
